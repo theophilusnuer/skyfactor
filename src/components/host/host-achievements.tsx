@@ -3,7 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { PortableText } from "@portabletext/react";
-import { portableTextComponents } from "@/components/host/portable-text-components";
+import { getPortableTextComponents } from "@/components/host/portable-text-components";
 import type { Host } from "@/types/sanity";
 
 export default function HostAchievements({
@@ -17,6 +17,10 @@ export default function HostAchievements({
     about?.title || about?.tagline || (about?.shortBio?.length ?? 0) > 0,
   );
   if (achievements.length === 0 && !hasAbout) return null;
+
+  const components = getPortableTextComponents({
+  normalTextClassName: "text-white/75",
+});
 
   return (
     <section
@@ -57,7 +61,7 @@ export default function HostAchievements({
                 </h2>
               )}
               {about?.tagline && (
-                <p className="mt-5 font-playfair text-xl italic leading-8 text-white/65 sm:text-2xl">
+                <p className="mt-5 font-playfair text-lg italic leading-8 text-white/65 sm:text-2xl">
                   {about.tagline}
                 </p>
               )}
@@ -67,7 +71,7 @@ export default function HostAchievements({
               <div className="space-y-5 text-base leading-8 text-white/70 sm:text-lg sm:leading-9 lg:col-span-7">
                 <PortableText
                   value={about!.shortBio!}
-                  components={portableTextComponents}
+                  components={components}
                 />
               </div>
             )}

@@ -32,11 +32,11 @@ export default function ContactPageClient() {
             <div className="grid gap-10 py-8 sm:py-12 lg:grid-cols-12 lg:items-end lg:gap-12">
               <div className="lg:col-span-9">
                 <h1 className="max-w-6xl text-[clamp(3.0rem,10vw,8.5rem)] font-medium leading-[0.84] tracking-[-0.085em]">
-                  Let&apos;s make{" "}
-                  <span className="font-playfair font-normal italic text-sky-400">
-                    room
+                  Let&apos;s have{" "}
+                  <span className="">
+                    a
                   </span>
-                  <span className="block">for a conversation.</span>
+                  <span className="block font-playfair font-normal italic text-sky-400">  conversation.</span>
                 </h1>
               </div>
 
