@@ -1,0 +1,86 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-sf-navy: #080e1a;
+  --color-sf-black: #050505;
+  --color-sf-ivory: #f6f2ea;
+  --color-sf-gold: #b89b5e;
+
+  --font-manrope: var(--font-manrope-loaded);
+  --font-dm-sans: var(--font-dm-sans-loaded);
+  --font-playfair: var(--font-playfair-loaded);
+}
+
+:root {
+  --font-manrope-loaded: "Manrope", sans-serif;
+  --font-dm-sans-loaded: "DM Sans", sans-serif;
+  --font-playfair-loaded: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--color-sf-ivory);
+  color: var(--color-sf-navy);
+  font-family: var(--font-dm-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-manrope);
+  letter-spacing: -0.045em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--color-sky-400);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* Contact form phone picker */
+.contact-phone {
+  --PhoneInputCountrySelect-marginRight: 0.75rem;
+  --PhoneInputCountryFlag-borderColor: transparent;
+  --PhoneInput-color--focus: #0ea5e9;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(16, 26, 40, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0 1rem;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.contact-phone:focus-within {
+  border-color: #0ea5e9;
+  background: #fff;
+}
+.contact-phone .PhoneInputInput {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 0.875rem 0;
+  font-size: 0.875rem;
+  color: #101a28;
+  outline: none;
+}
