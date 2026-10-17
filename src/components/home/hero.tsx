@@ -77,10 +77,10 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="/episodes"
+              href="/guests"
               className="group inline-flex min-h-14 w-full items-center justify-between gap-7 border border-white/70 bg-white/[0.025] px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-sky-300 hover:bg-white/[0.07] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400 sm:w-auto sm:min-w-56 xl:min-w-60"
             >
-              <span>Browse Episodes</span>
+              <span>Meet Our Guests</span>
               <span className="flex size-10 shrink-0 items-center justify-center bg-gradient-to-br from-blue-500 to-sky-400 text-white transition-transform duration-300 group-hover:translate-x-1">
                 <ArrowUpRight aria-hidden="true" className="size-5" strokeWidth={1.8} />
               </span>
